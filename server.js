@@ -9,10 +9,20 @@ import { Joya } from "./Class/Joya.js"
 
 const app = express();
 const joya = new Joya();
+//Aqui iria el JWT
 
+//ACA CONFIGURAMOS TODO EL JWT
+
+const token = jwt.sign(usuario, 'secreto', { expiresIn: '1h' });
+
+console.log('JWT generado:', token);
+
+
+//Listas las rutas
 app.use(express.json());
 //ruta crear (esta buena)
 app.post("/v1/joyas", async (req, res)=>{
+    
     //punto 16
     const joyas = await joya.crear(req.body.nombre,req.body.material, req.body.peso, req.body.precio)
     console.log(joyas[0].id);
@@ -66,6 +76,19 @@ app.put("/v1/joyas/:id", async (req, res)=>{
         res.sendStatus(400);
     }
 })
+
+//endpoint para subir imagenes
+app.post("/v1/joyas/imagen"async (req, res)=>{
+    if (token === true){
+
+    }else{
+        
+    }
+    
+})
+
+
+
 
 app.listen(3000, ()=>{console.log("Levantado puerto http://localhost:3000")});
 
