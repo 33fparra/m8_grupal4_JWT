@@ -1,0 +1,5 @@
+1692851079028: error: no existe la relación «joyas» 
+1692851579779: error: no existe la relación «joyas» 
+1692851930896: error: no existe la relación «joyas» 
+1692852344695: error: no existe la relación «joyas» 
+1692852347382: error: no existe la relación «joyas» 
