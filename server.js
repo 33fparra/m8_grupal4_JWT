@@ -3,6 +3,14 @@
 import express from "express";
 import fs from "fs";
 import cors from "cors"
+import multer from 'multer';
+import { fileURLToPath } from 'url';
+import { dirname, extname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
 // app.use(cors());
 //punto 14 uso de estructura de carpetas
 import { Joya } from "./Class/Joya.js"
