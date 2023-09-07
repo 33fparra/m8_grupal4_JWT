@@ -4,7 +4,7 @@ const {Pool} = pg;
 const pool = new Pool({
   host: "localhost",
   user: "postgres",
-  password: "12345",
+  password: "pipe1234",
   database: "grupal2m8",
   port: 5432,
   max: 20, // máximo de 20 clientes

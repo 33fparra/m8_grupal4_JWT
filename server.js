@@ -30,7 +30,7 @@ const upload = multer({
 });
 
 // Middleware para validar el JWT
-const SECRET_KEY = 'tu_clave_secreta'; // Cambia esto por tu clave secreta
+const SECRET_KEY = 'secreto'; // Cambia esto por tu clave secreta
 const validarJWT = (req, res, next) => {
   // Obtener el token del encabezado de la solicitud
   const token = req.header('Authorization');
